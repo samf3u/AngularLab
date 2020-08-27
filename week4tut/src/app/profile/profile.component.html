@@ -1,0 +1,48 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<Style>
+  .account {
+   margin-left: 30%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: lightgray;
+   height: 400px;
+ };
+ .contentAccount{
+   margin-left: 30%;
+   margin-top: 30px;
+   width: 50%;
+ }
+</Style>
+
+
+<div id="formContent" class="account">
+    <div style="margin-left: 30%; margin-top: 30px">
+    <!-- Login Form -->
+    <h1> Edit User Profile Page </h1>
+      <form id="profileForm">
+        <div style="margin-top: 20px">
+          <input type="text" [(ngModel)]="user.username" name="username"> 
+        </div>
+        <div style="margin-top: 20px">
+          <input type="text" [(ngModel)]="user.birthdate" name="birthdate"> 
+        </div>
+        <div style="margin-top: 20px">
+          <input type="text" [(ngModel)]="user.age" name="age"> 
+        </div>
+        <div style="margin-top: 20px">
+          <input type="text" [(ngModel)]="user.email" name="email"> 
+        </div>
+        <div style="margin-top: 20px">
+          <button (click)="saveChanges()"> Save </button> 
+        </div>
+        
+      </form>
+  </div>  
+</div>
+
+

@@ -1,9 +1,20 @@
+<html>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<Style>
+  form {
+   margin-left: 30%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: lightgray;
+   height: 400px;
+ }
+</Style>
 
-<div class="wrapper fadeInDown">
   <div id="formContent">
 
     <!-- Login Form -->
@@ -11,24 +22,25 @@
       <!--<input type="text" id="login" class="fadeIn second" name="login" placeholder="Username"> 
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
       <input type="submit" class="fadeIn fourth" value="Log In"><br>-->
-      <div style="margin-top: 20px">
+      <div style="margin-top: 50px; margin-left: 30%">
         <h1>
             Log In
         </h1>
-    </div>
+    
         <div style="margin-top: 20px">
-            <input type="text" [(ngModel)]="username" name="login"> 
+            <input type="text" [(ngModel)]="user.username" name="username"> 
         </div>
         <div style="margin-top: 20px">
-      <input type="text" [(ngModel)]="upwd" name="upwd"> 
+      <input type="text" [(ngModel)]="user.password" name="password"> 
     </div>
       <div style="margin-top: 20px">
       <button (click)="loginClicked()"> Log In </button>
     </div>
       <div style="margin-top: 20px">
-      <label >{{errorMessage}}</label> 
+      <label style="color:red">{{errorMessage}}</label> 
     </div>
+  </div>
     </form>
 
   </div>
-</div>
+  </html>

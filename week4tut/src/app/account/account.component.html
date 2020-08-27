@@ -2,25 +2,54 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<Style>
+  .account {
+   margin-left: 30%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: lightgray;
+   min-height: 400px;
+ };
+ .contentAccount{
+   margin-left: 30%;
+   margin-top: 30px;
+   width: 50%;
+ }
+</Style>
 
-<div class="wrapper fadeInDown">
-  <div id="formContent">
 
+  <div id="formContent" class="account">
+    <div style="margin-left: 30%; margin-top: 30px">
     <!-- Login Form -->
     <h1> Accounts Page </h1>
-    <img src="../../assets/images/Beach.jpg" style="width: 300px; height: 200px">
+    
 
-    <ul>
-        <li>
-            Sam
-        </li>
-        <li>
-            Griffith Uni
-        </li>
-        <li>
-            22 Years old
-        </li>
-    </ul>
-  </div>
+    <ng-template [ngIf]="isLoggedIn" [ngIfElse]="loggedOut">
+      <div >
+        Welcome Back, friend.<br><br>
+
+        <img src="../../assets/images/Beach.jpg" style="width: 300px; height: 200px"><br><br>
+
+        <label>  Name: {{user.username}} </label><br><br>
+
+        <label>  Birthdate: {{user.birthdate}} </label><br><br>
+
+        <label>  Age: {{user.age}} </label><br><br>
+
+        <label>  email: {{user.email}} </label><br><br>
+
+        <button (click)="editProfile()"> Edit </button><br><br>
+      </div>
+    </ng-template>
+
+    <ng-template #loggedOut>
+      <div>
+       Please login, friend.
+      </div>
+    </ng-template>    
+  </div>  
 </div>
+
 

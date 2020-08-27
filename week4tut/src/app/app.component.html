@@ -1,12 +1,40 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-  <ul class="nav navbar-nav" >
-  <li class="active"><a class="nav-link" routerLink="/">Home</a></li>
-  <li> <a class="nav-link" routerLink="/login">Login</a></li>
+<style>
+  ul, button{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #333333;
+ }
+ 
+ li {
+   float: left;
+ }
+ button{
+   float: right;
+ }
+ li a, button{
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 16px;
+   text-decoration: none;
+ }
+ 
+ li a:hover {
+   background-color: #111111;
+ } 
+ </style>
+<nav >
+  <div>
+  <ul  >
+  <li ><a class="nav-link" routerLink="/">Home</a></li>
   <li><a class="nav-link" routerLink="/account">Account</a></li>
+  <li> <a class="nav-link" routerLink="/login">Login</a></li>
+  <button (click)="logoutClicked()"> Log Out </button>
   </ul>
   </div>
  </nav>
@@ -14,7 +42,55 @@
  <router-outlet></router-outlet>
  </div>
 
-
+ <!-- <html>
+  <head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111111;
+  } 
+  </style>
+  </head>
+  <body>
+  
+  <h2>Navigation Menu</h2>
+  <p>In this example, we use CSS to style the list horizontally, to create a navigation menu:</p>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav" >
+    <li class="active"><a class="nav-link" routerLink="/">Home</a></li>
+    <li> <a class="nav-link" routerLink="/login">Login</a></li>
+    <li><a class="nav-link" routerLink="/account">Account</a></li>
+    </ul>
+    </div>
+ <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul> 
+  
+  </body>
+  </html> -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
